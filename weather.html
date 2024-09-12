@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="website-body">
+      <div class="header">
+        <input
+          type="text"
+          name="Search"
+          id="searchBar"
+          placeholder="Search a place"
+        />
+        <button title="Search City" id="searchBtn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="weather-result">
+        <div class="weather-info">
+          <p class="status">☀️</p>
+          <p class="temperature"><strong class="temp">100</strong>&deg;C</p>
+          <p class="weather-status">Sunny Day</p>
+        </div>
+        <div class="weather-suggests">
+          <p class="city-name">Manila</p>
+          <div class="suggestions">
+            <p>
+              The weather is nice, you can go out for a picnic or even for a
+              swim. Just bring an umbrella and wear comfy clothes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="weather.js"></script>
+  </body>
+</html>
