@@ -14,8 +14,26 @@ async function checkWeather(city) {
 
   document.querySelector(".city-name").innerHTML = data.name;
   document.querySelector(".temp").innerHTML = Math.round(data.main.temp);
-}
 
+  //Weather Condition
+  document.querySelector(".weather-status").innerHTML = data.weather[0].main;
+
+  if (data.weather[0].main == "Clouds") {
+    document.querySelector(".status").innerHTML = "☁️";
+    document.querySelector(".suggest").innerHTML =
+      "Bring umbrella, there is a chance of raining.";
+  } else if (data.weather[0].main == "Sunny") {
+    document.querySelector(".status").innerHTML = "☀️";
+    document.querySelector(".suggest").innerHTML =
+      "Bring sunscreen, it's a bright day.";
+  } else if (data.weather[0].main == "Rainy") {
+    document.querySelector(".status").innerHTML = "🌧️";
+    document.querySelector(".suggest").innerHTML =
+      "Stay hydrated and avoid sweating, it's raining. Bring umbrella!";
+  } else {
+    document.querySelector(".suggest").innerHTML = "Data weather not found";
+  }
+}
 //Get Data
 searchBtn.addEventListener("click", () => {
   checkWeather(searchBar.value);
