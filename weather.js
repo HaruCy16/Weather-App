@@ -19,7 +19,9 @@ async function checkWeather(city) {
     document.querySelector(".city-name").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp);
 
+    //Console Debugging
     console.log(data);
+
     //Weather Condition
     document.querySelector(".weather-status").innerHTML = data.weather[0].main;
 
