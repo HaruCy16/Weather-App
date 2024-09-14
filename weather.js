@@ -7,7 +7,6 @@ const searchBar = document.getElementById("searchBar");
 const searchBtn = document.getElementById("searchBtn");
 
 //Fetch Data
-
 async function checkWeather(city) {
   try {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
@@ -48,7 +47,15 @@ async function checkWeather(city) {
     alert("Place not found!");
   }
 }
+
 //Get Data
 searchBtn.addEventListener("click", () => {
   checkWeather(searchBar.value);
+});
+
+//Get data when enter is pressed
+searchBar.addEventListener("keypress", function (event) {
+  if (event.key == "Enter") {
+    checkWeather(searchBar.value);
+  }
 });
