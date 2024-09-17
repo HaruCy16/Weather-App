@@ -56,8 +56,9 @@ button {
 .weather-info {
   font-size: 2rem;
 }
-.weather-info p.status {
-  font-size: 3rem;
+.weather-info img {
+  display: none;
+  height: 10rem;
 }
 
 /*Weather Suggests*/
